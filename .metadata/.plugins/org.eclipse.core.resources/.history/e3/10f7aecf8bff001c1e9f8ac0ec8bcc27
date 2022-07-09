@@ -1,0 +1,19 @@
+package com.bharath.spring.springcore;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		try (ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/bharath/spring/springcore/config.xml")) {
+			Employee emp = (Employee) ctx.getBean("emp");
+			System.out.println(emp.getId());
+			System.out.println(emp.getName());
+		} catch (BeansException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
