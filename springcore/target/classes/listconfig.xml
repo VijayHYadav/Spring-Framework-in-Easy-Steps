@@ -12,18 +12,23 @@
                <value>Global Hospital</value>
            </property>
             <property name="departments">
-<!--                <list>-->
+                <list>
                     <value>Front office</value>
-<!--                    <value>In Patient</value>-->
-<!--                    <value>Out Patient</value>-->
-<!--                </list>-->
+                    <value>In Patient</value>
+                    <value>Out Patient</value>
+                </list>
             </property>
+
 <!--            <property name="departments">-->
 <!--                <list>-->
 <!--                    define the empty list    -->
 <!--                    define the empty list    -->
 <!--                    define the empty list    -->
 <!--                </list>-->
+<!--            </property>-->
+
+<!--            <property name="departments">-->
+<!--                <value>Front office</value>-->
 <!--            </property>-->
     </bean>
 
