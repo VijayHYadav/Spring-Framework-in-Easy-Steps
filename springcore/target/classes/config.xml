@@ -10,11 +10,5 @@
 	<bean name="emp" class="com.bharath.spring.springcore.Employee"
 		p:id="20" p:name="vizz"
 	/>
-<!--		<property name="id" value="25"/>-->
-<!--&lt;!&ndash;			<value>20</value>&ndash;&gt;-->
-<!--&lt;!&ndash;		</property>&ndash;&gt;-->
-<!--		<property name="name" value="vijay"/>-->
-<!--&lt;!&ndash;			<value>Bharath</value>&ndash;&gt;-->
-<!--&lt;!&ndash;		</property>&ndash;&gt;-->
 
 </beans>
