@@ -9,7 +9,9 @@ public class Test {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("innerbeans.xml");
 		Employee employee = (Employee) context.getBean("employee");
-		System.out.println(employee);
+		Employee employee2 = (Employee) context.getBean("employee");
+		System.out.println(employee.hashCode());
+		System.out.println(employee2.hashCode());
 	}
 
 }
