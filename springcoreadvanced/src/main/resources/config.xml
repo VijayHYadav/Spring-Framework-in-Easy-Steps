@@ -10,7 +10,7 @@
 
     <bean class="com.bharath.spring.springadvanced.autowiring.Address" name="address" p:hno="123" p:street="mira mesa" p:city="san diego" />
 
-    <bean class="com.bharath.spring.springadvanced.autowiring.Employee" name="employee" autowire="byType"/>
+    <bean class="com.bharath.spring.springadvanced.autowiring.Employee" name="employee" autowire="byName"/>
 </beans>
 
 
