@@ -13,5 +13,11 @@
 
     <context:component-scan base-package="com.bharath.spring.springadvanced.stereotype.annotations" />
 
+    <util:list list-class="java.util.LinkedList" id="topics">
+        <value>Java Web Services</value>
+        <value>Core java</value>
+        <value>XSLT</value>
+    </util:list>
+
 </beans>
 
