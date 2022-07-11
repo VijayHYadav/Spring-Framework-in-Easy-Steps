@@ -2,7 +2,7 @@ package com.bharath.spring.springadvanced.stereotype.annotations;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("guru")
 public class Instructor {
     private int id;
     private String name;
