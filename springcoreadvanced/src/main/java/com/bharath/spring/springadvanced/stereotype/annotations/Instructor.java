@@ -1,13 +1,17 @@
 package com.bharath.spring.springadvanced.stereotype.annotations;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("guru")
 @Scope("singleton")
 public class Instructor {
-    private int id;
-    private String name;
+
+    @Value("10")
+    private int id = 62;
+    @Value("bharath")
+    private String name = "vijay";
 
     public int getId() {
         return id;
