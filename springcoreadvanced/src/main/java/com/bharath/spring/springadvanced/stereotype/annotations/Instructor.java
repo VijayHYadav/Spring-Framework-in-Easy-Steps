@@ -1,8 +1,10 @@
 package com.bharath.spring.springadvanced.stereotype.annotations;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("guru")
+@Scope("singleton")
 public class Instructor {
     private int id;
     private String name;
