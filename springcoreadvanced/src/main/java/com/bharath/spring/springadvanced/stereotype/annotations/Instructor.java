@@ -1,5 +1,6 @@
 package com.bharath.spring.springadvanced.stereotype.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -14,9 +15,11 @@ public class Instructor {
     private int id = 62;
     @Value("bharath")
     private String name = "vijay";
-
     @Value("#{topics}")
     private List<String> topics;
+
+    @Autowired
+    private Profile profile;
 
     public int getId() {
         return id;
@@ -40,6 +43,7 @@ public class Instructor {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", topics=" + topics +
+                ", profile=" + profile +
                 '}';
     }
 }
