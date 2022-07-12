@@ -12,8 +12,9 @@
        http://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean class="com.bharath.spring.springadvanced.injecting.interfaces.OrderDAOImpl" name="dao" />
+    <bean class="com.bharath.spring.springadvanced.injecting.interfaces.OrderDAOImpl2" name="dao2" />
     <bean class="com.bharath.spring.springadvanced.injecting.interfaces.OrderBOImpl" name="bao">
-        <property name="dao" ref="dao" />
+        <property name="dao" ref="dao2" />
     </bean>
 </beans>
 
