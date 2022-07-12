@@ -19,6 +19,11 @@ public class Instructor {
 //  @Value("#{'vijay.h.yadav'.toUpperCase()}")
     @Value("#{new java.lang.String('catti')}")
     private String name = "vijay";
+
+//    @Value("#{6!=9}")
+    @Value("#{6==9 ? true : false}")
+    private boolean active;
+
     @Value("#{topics}")
     private List<String> topics;
 
@@ -41,11 +46,13 @@ public class Instructor {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
         return "Instructor{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", active=" + active +
                 ", topics=" + topics +
                 ", profile=" + profile +
                 '}';
