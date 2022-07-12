@@ -14,7 +14,10 @@ public class Instructor {
 //    @Value("#{new Integer(786)}")
     @Value("#{T(java.lang.Integer).MIN_VALUE}")
     private int id = 62;
-    @Value("bharath")
+
+//    @Value("bharath")
+//  @Value("#{'vijay.h.yadav'.toUpperCase()}")
+    @Value("#{new java.lang.String('catti')}")
     private String name = "vijay";
     @Value("#{topics}")
     private List<String> topics;
