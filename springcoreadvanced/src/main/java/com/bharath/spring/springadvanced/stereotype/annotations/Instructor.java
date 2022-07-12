@@ -11,7 +11,8 @@ import java.util.List;
 @Scope("singleton")
 public class Instructor {
 
-    @Value("#{T(java.lang.Math).abs(-99)}")
+//    @Value("#{new Integer(786)}")
+    @Value("#{T(java.lang.Integer).MIN_VALUE}")
     private int id = 62;
     @Value("bharath")
     private String name = "vijay";
