@@ -12,9 +12,9 @@ public class Test {
         EmployeeDao dao = (EmployeeDao) ctx.getBean("employeeDao");
         Employee employee = new Employee();
         employee.setId(2);
-        employee.setFirtname("Vinay");
+        employee.setFirtname("Vishal");
         employee.setLastname("Yadav");
-        int result = dao.create(employee);
+        int result = dao.update(employee);
         System.out.println("Number of result : "+result);
     }
 }
