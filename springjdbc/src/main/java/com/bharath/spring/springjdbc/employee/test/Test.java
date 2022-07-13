@@ -1,15 +1,20 @@
 package com.bharath.spring.springjdbc.employee.test;
 
+import com.bharath.spring.springjdbc.employee.dao.EmployeeDao;
+import com.bharath.spring.springjdbc.employee.dto.Employee;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class Test {
     public static  void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
-        JdbcTemplate jdbcTemplate = (JdbcTemplate) ctx.getBean("jdbcTemplate");
-        String sql = "insert into employee values(?,?,?)";
-        int result = jdbcTemplate.update(sql, 1,"Vijay", "Yadav");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("createConfig.xml");
+        EmployeeDao dao = (EmployeeDao) ctx.getBean("employeeDao");
+        Employee employee = new Employee();
+        employee.setId(2);
+        employee.setFirtname("Vinay");
+        employee.setLastname("Yadav");
+        int result = dao.create(employee);
         System.out.println("Number of result : "+result);
     }
 }
