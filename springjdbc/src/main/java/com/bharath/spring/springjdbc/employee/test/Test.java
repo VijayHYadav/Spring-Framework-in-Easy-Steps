@@ -6,11 +6,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+
 public class Test {
     public static  void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("createConfig.xml");
         EmployeeDao dao = (EmployeeDao) ctx.getBean("employeeDao");
-        Employee employee = dao.read(2);
-        System.out.println("Number of result : "+employee);
+        List<Employee> result = dao.read();
+        System.out.println("Number of result : "+result);
     }
 }
