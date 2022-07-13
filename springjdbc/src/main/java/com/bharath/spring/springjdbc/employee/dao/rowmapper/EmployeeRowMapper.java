@@ -9,6 +9,10 @@ import java.sql.SQLException;
 public class EmployeeRowMapper implements RowMapper<Employee> {
     @Override
     public Employee mapRow(ResultSet resultSet, int i) throws SQLException {
-        return null;
+        Employee employee = new  Employee();
+        employee.setId(resultSet.getInt(1));
+        employee.setFirtname(resultSet.getString(2));
+        employee.setLastname(resultSet.getString(3));
+        return employee;
     }
 }
