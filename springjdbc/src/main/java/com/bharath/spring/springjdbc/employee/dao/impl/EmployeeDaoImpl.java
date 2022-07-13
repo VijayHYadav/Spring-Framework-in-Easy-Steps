@@ -1,6 +1,7 @@
 package com.bharath.spring.springjdbc.employee.dao.impl;
 
 import com.bharath.spring.springjdbc.employee.dao.EmployeeDao;
+import com.bharath.spring.springjdbc.employee.dao.rowmapper.EmployeeRowMapper;
 import com.bharath.spring.springjdbc.employee.dto.Employee;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -32,7 +33,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public Employee read(int id) {
         String sql = "select * from employee where id = ?";
-        jdbcTemplate.queryForList(sql, ""); // still gonna need coding here...
+        EmployeeRowMapper rowMapper = new EmployeeRowMapper();
+        Employee employee = jdbcTemplate.queryForObject(sql, rowMapper, id);
+        return employee;
     }
 
     public JdbcTemplate getJdbcTemplate() {

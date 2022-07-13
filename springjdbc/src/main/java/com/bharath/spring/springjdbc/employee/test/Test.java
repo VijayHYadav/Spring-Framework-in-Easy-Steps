@@ -10,11 +10,7 @@ public class Test {
     public static  void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("createConfig.xml");
         EmployeeDao dao = (EmployeeDao) ctx.getBean("employeeDao");
-        Employee employee = new Employee();
-        employee.setId(2);
-        employee.setFirtname("Vishal");
-        employee.setLastname("Yadav");
-        int result = dao.delete(1);
-        System.out.println("Number of result : "+result);
+        Employee employee = dao.read(2);
+        System.out.println("Number of result : "+employee);
     }
 }
