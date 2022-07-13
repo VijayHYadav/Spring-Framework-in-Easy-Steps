@@ -14,7 +14,7 @@ public class Test {
         employee.setId(2);
         employee.setFirtname("Vishal");
         employee.setLastname("Yadav");
-        int result = dao.update(employee);
+        int result = dao.delete(1);
         System.out.println("Number of result : "+result);
     }
 }
