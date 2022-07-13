@@ -29,6 +29,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
         return result;
     }
 
+    @Override
+    public Employee read(int id) {
+        String sql = "select * from employee where id = ?";
+        jdbcTemplate.queryForList(sql, ""); // still gonna need coding here...
+    }
+
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
     }
