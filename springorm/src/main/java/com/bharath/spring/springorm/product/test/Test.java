@@ -9,12 +9,15 @@ public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         ProductDao productDao  = (ProductDao) context.getBean("productDao");
-        Product product = new Product();
-        product.setId(1);
-        product.setName("IPHONE");
-        product.setDesc("this is update");
-        product.setPrice(700);
+//        Product product = new Product();
+//        product.setId(4);
+//        product.setName("Google Phone");
+//        product.setDesc("this is Google");
+//        product.setPrice(200);
+//        productDao.create(product);
 //        productDao.update(product);
-        productDao.delete(product);
+//        productDao.delete(product);
+//        System.out.println(productDao.find(4));
+        System.out.println(productDao.findAll());
     }
 }
