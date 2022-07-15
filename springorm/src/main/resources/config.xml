@@ -12,4 +12,22 @@
           p:username="root" p:password="admin"
     />
 
+    <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="sessionFactory" p:dataSource="dataSource">
+        <property name="hibernateProperites">
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLDialect
+                </prop>
+                <prop key="hibernate.show_sql">
+                    true
+                </prop>
+            </props>
+        </property>
+        <property name="annotateClasses">
+            <list>
+                <value>com.bharath.spring.springorm.product.entity.Product</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>
