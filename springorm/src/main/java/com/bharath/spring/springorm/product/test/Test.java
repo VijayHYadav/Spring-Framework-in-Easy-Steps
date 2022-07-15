@@ -14,6 +14,7 @@ public class Test {
         product.setName("IPHONE");
         product.setDesc("this is update");
         product.setPrice(700);
-        productDao.update(product);
+//        productDao.update(product);
+        productDao.delete(product);
     }
 }
