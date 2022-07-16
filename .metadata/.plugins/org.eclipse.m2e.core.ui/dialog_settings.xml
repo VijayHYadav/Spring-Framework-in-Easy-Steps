@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Library\Writing\Spring\SpringFundamental\Spring Framework In Easy Steps\springcore\src\main\java\com\bharath\spring\springcore\Test.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,13 +26,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.bharath.spring.springcore"/>
+			<item value="com.bharat.spring.springmvc"/>
 		</list>
 		<list key="groupId">
-			<item value="com.bharath.spring"/>
+			<item value="com.bharat.spring"/>
 		</list>
 		<list key="artifactId">
-			<item value="springcore"/>
+			<item value="springmvc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
