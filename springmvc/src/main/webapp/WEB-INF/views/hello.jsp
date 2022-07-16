@@ -8,5 +8,15 @@
 </head>
 <body>
 	<h1>Hello from spring mvc this text is from hello.jsp</h1>
+
+	<%
+	Integer id = (Integer) request.getAttribute("id");
+	String name = (String) request.getAttribute("name");
+	Integer salary = (Integer) request.getAttribute("salary");
+	out.print(id);
+	out.println(name);
+	out.println(salary);
+	%>
+
 </body>
 </html>
