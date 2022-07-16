@@ -14,7 +14,7 @@ public class HelloController {
 		
 		modelAndView.addObject("id", 123);
 		modelAndView.addObject("name", "Vijay");
-		modelAndView.addObject("salary", 123);
+		modelAndView.addObject("salary", 200000);
 		return modelAndView;
 	}
 }
