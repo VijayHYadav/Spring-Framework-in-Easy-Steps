@@ -69,4 +69,17 @@
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Library\Writing\Spring\SpringFundamental\Spring Framework In Easy Steps\springorm"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 </section>
