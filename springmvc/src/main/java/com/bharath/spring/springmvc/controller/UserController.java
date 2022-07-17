@@ -19,11 +19,12 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "registerUser", method = RequestMethod.POST)
-	public ModelAndView registerUser(@ModelAttribute("user")User user) {
+	public ModelAndView registerUser(@ModelAttribute("user") User user) {
 		System.out.println(user);
-		
+
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("userReg");
+		modelAndView.addObject("user", user);
+		modelAndView.setViewName("regResult");
 		return modelAndView;
 	}
 }
