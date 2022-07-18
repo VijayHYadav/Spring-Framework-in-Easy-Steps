@@ -1,5 +1,7 @@
 package com.bharath.spring.springmvcorm.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,12 +23,19 @@ public class UserController {
 		return "userReg";
 	}
 
+	@RequestMapping("getUsers")
+	public String getUsers(ModelMap model) {
+		List<User> users = userService.getUsers();
+		model.addAttribute("users", users);
+		return "displayUser";
+	}
+
 	@RequestMapping(value = "registerUser", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user, ModelMap model) {
 		System.out.println(user);
 		int result = userService.save(user);
-		model.addAttribute("result", "User created with Id"+result);
-		
+		model.addAttribute("result", "User created with Id" + result);
+
 		return "userReg";
 	}
 
