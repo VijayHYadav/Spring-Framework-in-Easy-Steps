@@ -23,8 +23,9 @@ public class UserController {
 
 	@RequestMapping(value = "registerUser", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user, ModelMap model) {
+		System.out.println(user);
 		int result = userService.save(user);
-		model.addAttribute("result, User created with Id"+result);
+		model.addAttribute("result", "User created with Id"+result);
 		
 		return "userReg";
 	}

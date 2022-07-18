@@ -1,7 +1,5 @@
 package com.bharath.spring.springmvcorm.user.dao.impl;
 
-import java.io.Serializable;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,7 +9,7 @@ import com.bharath.spring.springmvcorm.user.entity.User;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-	
+
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
 
@@ -25,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public int create(User user) {
-		Integer result = (Integer)hibernateTemplate.save(user);
+		Integer result = (Integer) hibernateTemplate.save(user);
 		return result;
 	}
 }
