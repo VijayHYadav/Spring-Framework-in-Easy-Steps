@@ -9,8 +9,16 @@
 <script type="text/javascript">
 	$(document).read(function() {
 		$("#id").change(function() {
+			$.ajax({
+				url : 'validateEmail',
+				data : {
+					id : $("#id").value()
+				},
+				success : function(responseTest) {
 
-		})
+				}
+			});
+		});
 	});
 </script>
 </head>
