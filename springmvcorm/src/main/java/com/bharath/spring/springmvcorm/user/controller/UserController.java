@@ -27,7 +27,7 @@ public class UserController {
 	public String getUsers(ModelMap model) {
 		List<User> users = userService.getUsers();
 		model.addAttribute("users", users);
-		return "displayUser";
+		return "displayUsers";
 	}
 
 	@RequestMapping(value = "registerUser", method = RequestMethod.POST)
