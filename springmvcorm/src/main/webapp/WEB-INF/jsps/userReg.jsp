@@ -5,11 +5,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).read(function() {
+		$("#id").change(function() {
+
+		})
+	});
+</script>
 </head>
 <body>
 	<form action="registerUser" method="post">
 		<pre>
-		Id: <input type="text" name="id" />
+		Id: <input type="text" name="id" id="id" />
 		Name: <input type="text" name="name" />
 		Email: <input type="text" name="email" />
 		<input type="submit" name="register" />
