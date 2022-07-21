@@ -13,7 +13,7 @@ public class LogginAspect {
 		System.out.println("Before Calling the method");
 	}
 	
-	@After("")
+	@After("execution(* com.bharat.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logAfter(JoinPoint joinPoint) {
 		System.out.println("After the method execution");
 	}
