@@ -6,7 +6,9 @@ public class Test {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 //		context.register(null);
-		Dao dao = context.getBean(Dao.class);
-		dao.create();
+//		Dao dao = context.getBean(Dao.class);
+//		dao.create();
+		Service service = context.getBean(Service.class);
+		service.save();
 	}
 }
