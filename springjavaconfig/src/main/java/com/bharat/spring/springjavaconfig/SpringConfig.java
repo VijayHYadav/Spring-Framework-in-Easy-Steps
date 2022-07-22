@@ -13,7 +13,7 @@ public class SpringConfig {
 //		return new Dao();
 //	}
 	
-	@Bean
+	@Bean(initMethod = "init", destroyMethod = "destroy")
 	public Service service() {
 		return new Service();
 	}

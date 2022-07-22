@@ -10,5 +10,6 @@ public class Test {
 //		dao.create();
 		Service service = context.getBean(Service.class);
 		service.save();
+		context.close();
 	}
 }
