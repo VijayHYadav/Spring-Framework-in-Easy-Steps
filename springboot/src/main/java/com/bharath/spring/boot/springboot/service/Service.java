@@ -1,4 +1,4 @@
-package com.bharath.spring.boot.springboot;
+package com.bharath.spring.boot.springboot.service;
 
 import org.springframework.stereotype.Component;
 
@@ -10,6 +10,7 @@ public class Service {
 	Dao dao;
 	
 	public Service(Dao dao) {
+		System.out.println("Service Bean Created");
 		this.dao = dao;
 	}
 	
