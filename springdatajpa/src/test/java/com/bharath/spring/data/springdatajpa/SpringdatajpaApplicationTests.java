@@ -38,7 +38,7 @@ class SpringdatajpaApplicationTests {
 		
 		System.out.println(repository.findByName("moto"));
 		System.out.println(repository.findByPrice(700d));
-		
+		System.out.println(repository.findByNameAndPrice("keyboard", 200d));
 	}
 
 }

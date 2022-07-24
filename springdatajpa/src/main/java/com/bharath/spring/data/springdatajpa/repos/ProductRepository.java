@@ -7,7 +7,11 @@ import org.springframework.data.repository.CrudRepository;
 import com.bharath.spring.data.springdatajpa.data.entities.Product;
 
 public interface ProductRepository extends CrudRepository<Product, Long> {
-	
+
 	List<Product> findByName(String name);
+
 	List<Product> findByPrice(Double name);
+
+	List<Product> findByNameAndPrice(String name, Double price);
+
 }
