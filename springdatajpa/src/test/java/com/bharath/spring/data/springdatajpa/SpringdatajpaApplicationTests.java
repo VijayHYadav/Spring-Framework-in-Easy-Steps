@@ -29,8 +29,13 @@ class SpringdatajpaApplicationTests {
 
 		Optional<Product> findById = repository.findById(10L);
 		if (findById.isPresent()) {
-			System.out.println(findById);
+			Product product = findById.get();
+			product.setPrice(200d);
+			repository.save(product);
+			
+			repository.findAll().forEach(p ->{System.out.println(p.getPrice());});
 		}
+		
 	}
 
 }
