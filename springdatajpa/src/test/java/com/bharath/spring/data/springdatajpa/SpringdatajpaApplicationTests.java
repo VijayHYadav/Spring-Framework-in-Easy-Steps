@@ -27,14 +27,17 @@ class SpringdatajpaApplicationTests {
 //		product.setPrice(1000d);
 //		repository.save(product);
 
-		Optional<Product> findById = repository.findById(10L);
-		if (findById.isPresent()) {
-			Product product = findById.get();
-			product.setPrice(200d);
-			repository.save(product);
-			
-			repository.findAll().forEach(p ->{System.out.println(p.getPrice());});
-		}
+//		Optional<Product> findById = repository.findById(10L);
+//		if (findById.isPresent()) {
+//			Product product = findById.get();
+//			product.setPrice(200d);
+//			repository.save(product);
+//			
+//			repository.findAll().forEach(p ->{System.out.println(p.getPrice());});
+//		}
+		
+		System.out.println(repository.findByName("moto"));
+		System.out.println(repository.findByPrice(700d));
 		
 	}
 
